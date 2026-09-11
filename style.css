@@ -65,3 +65,17 @@ footer{padding:30px 8vw;border-top:1px solid var(--line);display:flex;justify-co
 }
 .contactbox .btn{padding:14px 24px;background:#171717;color:#fff;border:1px solid #171717;font-weight:700}
 .contactbox .btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+.menu-toggle{
+  display:none;
+  background:transparent;
+  border:1px solid var(--line);
+  padding:10px 13px;
+  font-size:22px;
+  cursor:pointer;
+}
+
+@media(max-width:900px){
+  .menu-toggle{
+    display:block;
+  }
+}
