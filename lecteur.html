@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiche du catalogue - KISSI-PROD</title>
+  <title>KISSI-PROD — Catalogue</title>
 
   <style>
     html, body {
@@ -11,6 +11,7 @@
       padding: 0;
       width: 100%;
       height: 100%;
+      overflow: hidden;
       background: #111;
     }
 
@@ -24,29 +25,21 @@
 
 <body>
 
-  <iframe id="viewer"></iframe>
+  <iframe id="pdfViewer"></iframe>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const page = parseInt(params.get("page")) || 5;
 
-    const viewer = document.getElementById("viewer");
+    const pdf =
+      "https://kissiprod95-max.github.io/catalogue-officiel-kissi-prod.pdf";
 
-    viewer.src =
-      "https://docs.google.com/gview?embedded=1&url=" +
-      encodeURIComponent(
-        "https://kissiprod95-max.github.io/catalogue-officiel-kissi-prod.pdf"
-      );
+    const viewer =
+      "https://mozilla.github.io/pdf.js/web/viewer.html?file=" +
+      encodeURIComponent(pdf) +
+      "#page=" + page;
 
-    viewer.onload = function () {
-      setTimeout(function () {
-        try {
-          viewer.contentWindow.location.hash = ":0.page." + (page - 1);
-        } catch (e) {
-          console.log("Navigation automatique indisponible");
-        }
-      }, 2500);
-    };
+    document.getElementById("pdfViewer").src = viewer;
   </script>
 
 </body>
