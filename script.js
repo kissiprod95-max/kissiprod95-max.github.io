@@ -39,3 +39,9 @@ document.querySelectorAll('.cardlink').forEach((link, index)=>{
     link.target = "_blank";
   }
 });
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+
+menuToggle.addEventListener('click', () => {
+  nav.classList.toggle('menu-open');
+});
