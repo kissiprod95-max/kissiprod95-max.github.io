@@ -79,3 +79,17 @@ footer{padding:30px 8vw;border-top:1px solid var(--line);display:flex;justify-co
     display:block;
   }
 }
+@media(max-width:900px){
+  nav.menu-open{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:76px;
+    right:6vw;
+    background:var(--paper);
+    border:1px solid var(--line);
+    padding:15px;
+    gap:15px;
+    z-index:20;
+  }
+}
