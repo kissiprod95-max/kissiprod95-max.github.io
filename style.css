@@ -93,3 +93,23 @@ footer{padding:30px 8vw;border-top:1px solid var(--line);display:flex;justify-co
     z-index:20;
   }
 }
+@media(max-width:900px){
+  .nav{
+    padding:0 5vw;
+  }
+
+  .brand img{
+    width:58px;
+    height:58px;
+  }
+
+  .brand{
+    gap:8px;
+    font-size:13px;
+  }
+
+  .menu-toggle{
+    padding:8px 11px;
+    font-size:20px;
+  }
+}
